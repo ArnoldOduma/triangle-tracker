@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.5s ease-in-out;
 }
 
 body {
@@ -14,21 +15,31 @@ body {
 .body-cont {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 20vh
 }
 
 .left-sec {
   width: 500px;
+  padding: 20px;
   max-width: 90%;
-  background: green;
-  font-size: ;
+  background: rgba(1, 69, 109, 0.363);
+  font-size: 22px;
+  text-align: center;
 }
 
 
 .result {
-  background: red;
+  margin: 30px 0;
   width: 100%;
   min-height: 20px;
+}
+#output{
+  background: orange;
+  padding: 20px 0;
+}
+.red{
+  background: red;
 }
 
 #imgBox img {
@@ -45,29 +56,39 @@ body {
 form {
   width: 500px;
   max-width: 100%;
-  background: rgba(224, 224, 224, 0.623);
-  margin: 30px auto;
-  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.288);
+
+  padding: 25px 20px;
 
 }
 
 form label {
-  padding-top: 30px;
-  margin-bottom: -30px;
   width: 100%;
   font-size: 20px;
 }
 
 form input[type=number] {
-  background: yellow;
+  background: rgba(255, 255, 255, 0.678);
   width: 100%;
   border: none;
-  padding: 5px;
+  padding: 10px;
+  margin:  5px 0 30px 0;
+  outline: none;
+}
+form input[type=number]:hover{
+  border-radius: 20px;
+}
+form input[type=number]:focus{
+  background: white;
+  border-radius: 20px;
+}
+::placeholder{
+  color: brown;
 }
 
 .buttons {
   text-align: center;
-  padding: 20px;
+  
 }
 
 .buttons input,
@@ -75,12 +96,25 @@ button {
   border: none;
   padding: 10px;
   width: 48%;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 .buttons input {
-  background: green;
+  background: rgba(255, 153, 0, 0.6);
+}
+.buttons input:hover{
+  background: rgba(255, 153, 0);
+  border-radius: 20px;
 }
 
 button {
+  background: rgba(255, 0, 0, 0.6);
+  
+}
+button:hover{
   background: red;
+  border-radius: 20px;
 }
