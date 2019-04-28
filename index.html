@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="enUS">
 
 <head>
   <meta charset="UTF-8">
@@ -12,14 +12,22 @@
 </head>
 
 <body>
+  <header>
+    <img src="./images/logo.png" alt="logo" height="100%">
+    <p>Triangle Tracker</p>
+  </header>
+  <div class="loader">
+    <div class="pulse"></div>
+  </div>
+
   <section class="body-cont">
     <div class="left-sec">
-      <p>I am a triangle tracker. <br> Enter the base height and hypotenuse and i'll tell you what kind of triangle you
+      <p>I am a triangle tracker. <br> Enter the base height and hypotenuse and i'll tell you what kind of triangle
+        you
         are.</p>
       <div class="result">
         <p id="output"> </p>
         <div id="imgBox"></div>
-
       </div>
     </div>
 
@@ -44,10 +52,7 @@
 
 
 
-
-
-
-
+  <!-- javascript -->
   <script type="text/javascript" src="./js/script.js"></script>
 </body>
 
