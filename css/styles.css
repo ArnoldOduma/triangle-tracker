@@ -1,3 +1,15 @@
+@font-face{
+  font-family: Abel;
+  src: url('../fonts/Abel-Regular.ttf');
+}
+@font-face{
+  font-family: khand;
+  src: url('../fonts/Khand-Bold.ttf');
+}
+@font-face{
+  font-family: Rajdhani;
+  src: url('../fonts/Rajdhani-Light.ttf');
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,21 +22,72 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  font-family: 'Abel', monospace;
 }
-
+header{
+  position: relative;
+  background: rgba(0, 0, 0, 0.404);
+  height: 100px;
+  padding: 10px;
+  box-shadow: 0 0 20px white;
+  font-family: 'Khand', monospace;
+  z-index: 10;
+}
+header img{
+  float: left;
+}
+header p{
+  position: absolute;
+  font-size: 40px;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  letter-spacing: 5px;
+  
+}
 .body-cont {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 20vh
+  padding-top: 10vh;
+  z-index: 10;
 }
-
+.loader{
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  animation: load 3s linear 1;
+}
+@keyframes load{
+  0%{ z-index: 12; background: rgb(0, 0, 0);padding-top: 75vh;}
+  100%{z-index: 12;background: rgb(0, 0, 0);padding-top: 75vh;}
+}
+.pulse{
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -40vh;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(1, 73, 1);
+  animation: pulse 1.5s linear infinite;
+}
+@keyframes pulse{
+  0%{box-shadow: 0 0 0 rgb(0, 0, 0);}
+  20%{box-shadow: 0 0 30px rgb(255, 4, 87);}
+  50%{box-shadow: 0 0 40px rgb(255, 255, 255);}
+  80%{box-shadow: 0 0 50px rgb(0, 38, 87);}
+}
 .left-sec {
   width: 500px;
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
   max-width: 90%;
-  background: rgba(1, 69, 109, 0.363);
-  font-size: 22px;
+  background: rgba(1, 69, 109, 0.527);
+  font-size: 28px;
+  font-weight: 900;
   text-align: center;
 }
 
@@ -37,6 +100,9 @@ body {
 #output{
   background: orange;
   padding: 20px 0;
+  font-size: 30px;
+  font-family: khand;
+  letter-spacing: 5px;
 }
 .red{
   background: red;
@@ -47,19 +113,15 @@ body {
   height: 100%;
   
 }
-
 .form-cont {
-  /* background: green; */
   max-width: 90%;
 }
 
 form {
   width: 500px;
   max-width: 100%;
-  background: rgba(255, 255, 255, 0.288);
-
+  background: rgba(77, 0, 0, 0.534);
   padding: 25px 20px;
-
 }
 
 form label {
@@ -74,6 +136,8 @@ form input[type=number] {
   padding: 10px;
   margin:  5px 0 30px 0;
   outline: none;
+  font-size: 18px;
+  font-family: khand;
 }
 form input[type=number]:hover{
   border-radius: 20px;
@@ -84,6 +148,7 @@ form input[type=number]:focus{
 }
 ::placeholder{
   color: brown;
+  font-family: Abel;
 }
 
 .buttons {
@@ -117,4 +182,25 @@ button {
 button:hover{
   background: red;
   border-radius: 20px;
+}
+@media screen and (max-width: 652px){
+  header p{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 522px){
+  header p{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 400px){
+  header img{
+    height: 70px;
+  }
+  header p{
+    font-size: 14px;
+    margin-top: 30px;
+  }
 }
